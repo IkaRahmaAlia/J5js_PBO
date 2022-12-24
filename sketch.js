@@ -76,3 +76,22 @@ function draw() {
 		balloonSizeMultiplier += 0.001;
 	}
 	
+	//------------------------------------------GAME-OVER---------------------------------------
+	mainTurrent.display();
+	mainTurrent.move();
+	if (mainTurrent.hitScan()){
+		gameOver();
+	}
+	
+	//------------------------------------------NAMA ANGGOTA------------------------------------------------
+	noStroke();
+	if (targetTimer < 500){
+		textAlign(LEFT);
+		textFont('Helvetica');
+		textSize(14);
+		fill(235);
+		text("Ika Rahma Alia (2117051016)", 35, 35);
+		text("Aprillia Anggun Sari Rahmawati (2117051038)", 35, 50);
+		text("Siska Hermayanti (2117051023)", 35, 65);
+	}
+}
