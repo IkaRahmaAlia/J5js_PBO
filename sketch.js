@@ -31,3 +31,8 @@ function mousePressed(){
 	oneBullet = new bullet(mouseVector.x, mouseVector.y);
 	bulletsFired.push(oneBullet);
 }
+
+function draw() {
+	background(20);
+	
+	drawReticle();
