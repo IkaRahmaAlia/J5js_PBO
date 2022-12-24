@@ -46,3 +46,15 @@ function draw() {
 		targetBalloons.push(newBalloon);
 		score += 0;
 	}
+	
+	//----------------------------------------------HERO-BULLETS----------------------------------------
+	for (var i = 0; i < bulletsFired.length; i++){
+		bulletsFired[i].display();
+		bulletsFired[i].update();
+		if (bulletsFired[i].outOfBounds()){
+			bulletsFired.splice(i,1);
+    		}
+		else if (bulletsFired[i].hitScan()){
+      			bulletsFired.splice(i,1);
+    		}
+	}
