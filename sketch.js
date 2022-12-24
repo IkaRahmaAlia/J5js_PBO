@@ -58,3 +58,21 @@ function draw() {
       			bulletsFired.splice(i,1);
     		}
 	}
+
+	
+	
+	
+	//-------------------------------------------MONSTER----------------------------------------
+	for (var i = 0; i < targetBalloons.length; i++){
+		targetBalloons[i].display();
+		targetBalloons[i].update();
+		if (targetBalloons[i].outOfBounds()){
+      		targetBalloons.splice(i,1);
+    	}
+	}
+	
+	balloonSpawnMultiplier += 0.001;
+	if (balloonSizeMultiplier < 5){
+		balloonSizeMultiplier += 0.001;
+	}
+	
