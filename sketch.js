@@ -36,3 +36,13 @@ function draw() {
 	background(20);
 	
 	drawReticle();
+	
+	//----------------------------------------BALLOONS-SPAWN--------------------------------------
+	targetTimer += 1;
+	let spawnInterval = int(100 / balloonSpawnMultiplier);
+	//print(spawnInterval)
+	if (targetTimer % spawnInterval == 0){
+		let newBalloon = new balloon();
+		targetBalloons.push(newBalloon);
+		score += 0;
+	}
