@@ -24,3 +24,10 @@ function setup() {
 	}
 	highScore = Cookies.get('highscore');
 }
+
+
+function mousePressed(){
+	let mouseVector = getMouseVector();
+	oneBullet = new bullet(mouseVector.x, mouseVector.y);
+	bulletsFired.push(oneBullet);
+}
